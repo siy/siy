@@ -57,5 +57,5 @@ All components in one place: core library, integrations, JBCT tooling, and Aethe
 ## Get In Touch
 
 - **Website:** [pragmaticalabs.io](https://pragmaticalabs.io)
-- **Email:** Sergiy.Yevtushenko@gmail.com
+- **Email:** sergiy.yevtushenko@pragmaticalabs.io
 - **LinkedIn:** [sergiy-yevtushenko](https://www.linkedin.com/in/sergiy-yevtushenko-6977a12/)
