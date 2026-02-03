@@ -1,70 +1,61 @@
 # Sergiy Yevtushenko
 
-**Senior Software Architect | Java & Rust | Distributed Systems | Functional Programming**
+**Founder, Pragmatica Labs | Distributed Systems | Functional Java**
 
-I build robust, high-performance systems with a focus on type safety and eliminating entire categories of bugs at compile time. My work spans from low-level systems programming to distributed consensus protocols and developer tooling.
+After 35 years building production systems - from embedded firmware to trading platforms - I founded Pragmatica Labs to solve the problems I kept seeing: fragile distributed architectures and unpredictable codebases.
 
-## What I Do
+The result is a unified stack: **Aether** (distributed runtime), **JBCT** (coding methodology + tooling), and **Pragmatica Lite** (functional primitives) - all working together to make Java backend development predictable and scalable.
 
-I specialize in designing systems where incorrect states are unrepresentable. This means leveraging advanced type systems, functional programming patterns, and careful API design to catch errors before they reach production.
+## Pragmatica Labs
 
-My current interests include:
-- Functional programming patterns for real-world backend systems
-- Distributed consensus and fault-tolerant architectures
-- AI-assisted development tooling and multi-agent coordination
-- Hardware wallet security and blockchain infrastructure
+**Website:** [pragmaticalabs.io](https://pragmaticalabs.io)
+
+We help teams build robust Java systems through technology and training. Our tools enforce correctness at compile time, and our methodology transforms "best practices" into mechanical rules that both humans and AI can follow.
 
 ## Featured Projects
 
-### Pragmatica Lite
-**Modern Functional Programming for Java 25** | [Repository](https://github.com/siy/pragmatica-lite)
+### Aether
+**Distributed Java Runtime** | [Repository](https://github.com/siy/aether) | [Watch Demo](https://www.awesomescreenshot.com/video/49014059?key=7c38f783c05577f9df19318ded22b966)
 
-Zero-dependency library providing monadic types (`Result<T>`, `Option<T>`, `Promise<T>`) that eliminate null pointer exceptions, unchecked exceptions, and callback hell. Built on sealed interfaces and pattern matching to fully leverage modern Java.
+The third option between monolith and microservices. Write business logic as "slices," deploy distributed. Aether handles orchestration, scaling, and resilience.
 
-- Functional style error handling with type-safe exception management
-- Async composition without callbacks or blocking
-- Production-ready with Jackson, JPA, and Micrometer integrations
-- Published on Maven Central
+- **Predictive autoscaling** - ML-based scaling that anticipates load, not reacts to it
+- **Zero-downtime updates** - Two-stage deploy/route model with weighted traffic shifting
+- **Chaos-tested** - 80 E2E tests covering node failures, network partitions, rolling restarts
+- **Aether Forge** - Local simulator with visual dashboard for development
 
-### Rabia-rs
-**Rust Implementation of Rabia Consensus Protocol** | [Repository](https://github.com/rabia-rs/rabia)
+Business Source License 1.1 -> Apache 2.0 after 4 years.
 
-A leaderless consensus protocol for building fault-tolerant distributed applications. Developers implement a simple `StateMachine` trait and the protocol handles all coordination across replicas.
+### JBCT
+**Java Backend Coding Technology** | [Repository](https://github.com/siy/coding-technology) | [Book](https://leanpub.com/jbct-book)
 
-- No leader election, no single point of failure
-- Transparent node membership changes
-- Memory pooling and zero-allocation hot paths
-- Comprehensive fault injection testing
+A methodology and tooling for writing deterministic, exception-free Java code. Designed for human-AI collaboration - when Claude or Copilot generates code, JBCT catches the mistakes.
 
-### Vibe Ensemble MCP
-**Multi-Agent Coordination for Claude Code** | [Repository](https://github.com/siy/vibe-ensemble-mcp)
+- **Four return types** - `T`, `Option<T>`, `Result<T>`, `Promise<T>` cover all signatures
+- **Six structural patterns** - Leaf, Sequencer, Fork-Join, Condition, Iteration, Aspects
+- **CLI + Maven plugin** - Automated validation with zero false negatives
+- **Parse, don't validate** - Invalid states become unrepresentable
 
-MCP server that enables Claude Code to manage specialized AI workers for complex development tasks. Implements stage-based pipelines with automatic worker spawning, dependency management, and quality gates.
+### Pragmatica
+**Unified Monorepo** | [Repository](https://github.com/pragmaticalabs/pragmatica)
 
-- Real-time web dashboard for project monitoring
-- Customizable worker templates
-- Persistent state with pause-and-resume capability
-- REST API and MCP tool integration
+All components in one place: core library, integrations, JBCT tooling, and Aether runtime.
 
-### Java Backend Coding Technology
-**Framework-Agnostic Methodology for Predictable Java Code** | [Repository](https://github.com/siy/coding-technology)
+| Module | Purpose |
+|--------|---------|
+| `core/` | Result, Option, Promise - functional primitives |
+| `integrations/` | Jackson, Micrometer, JDBC, consensus |
+| `jbct/` | CLI, Maven plugin, slice processor |
+| `aether/` | Distributed runtime |
 
-A complete methodology transforming backend development from subjective "best practices" into an engineered technology with mechanical rules. Designed for human-AI collaboration with deterministic, testable code patterns.
+## Work With Us
 
-- Four return types covering all function signatures (`T`, `Option<T>`, `Result<T>`, `Promise<T>`)
-- Six structural patterns (Leaf, Sequencer, Fork-Join, Condition, Iteration, Aspects)
-- Parse-don't-validate approach making invalid states unrepresentable
-- Comprehensive guide with nine-part learning series
-
-## Languages & Technologies
-
-**Primary:** Java (17-25), Rust
-
-**Areas:** Distributed Systems, Consensus Protocols, Functional Programming, API Design, Hardware Security (Ledger), Blockchain Infrastructure
+- **Pilots** - Deploy Aether in your environment with direct support
+- **Training** - JBCT workshops for your team
+- **Consulting** - Architecture review and migration planning
 
 ## Get In Touch
 
-- Email: Sergiy.Yevtushenko@gmail.com
-- LinkedIn: [sergiy-yevtushenko](https://www.linkedin.com/in/sergiy-yevtushenko-6977a12/)
-
-I'm always interested in discussing distributed systems, programming language design, and ways to make software more reliable through better abstractions.
+- **Website:** [pragmaticalabs.io](https://pragmaticalabs.io)
+- **Email:** Sergiy.Yevtushenko@gmail.com
+- **LinkedIn:** [sergiy-yevtushenko](https://www.linkedin.com/in/sergiy-yevtushenko-6977a12/)
