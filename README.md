@@ -15,7 +15,7 @@ We help teams build robust Java systems through technology and training. Our too
 ## Featured Projects
 
 ### Aether
-**Distributed Java Runtime** | [Repository](https://github.com/siy/aether) | [Watch Demo](https://www.awesomescreenshot.com/video/49014059?key=7c38f783c05577f9df19318ded22b966)
+**Distributed Java Runtime** | [Repository](https://github.com/siy/aether) | [Watch Demo](https://www.awesomescreenshot.com/video/49013877?key=a0b1105613f83dccc3948d6d41ebf75c)
 
 The third option between monolith and microservices. Write business logic as "slices," deploy distributed. Aether handles orchestration, scaling, and resilience.
 
