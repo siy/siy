@@ -1,61 +1,71 @@
 # Sergiy Yevtushenko
 
-**Founder, Pragmatica Labs | Distributed Systems | Functional Java**
+**Founder, Pragmatica Labs | Application Operating System for Java | 35 years production experience**
 
-After 35 years building production systems - from embedded firmware to trading platforms - I founded Pragmatica Labs to solve the problems I kept seeing: fragile distributed architectures and unpredictable codebases.
+After 35 years building production systems -- from embedded firmware to trading platforms -- I founded Pragmatica Labs to solve the problems I kept seeing: fragile distributed architectures, unpredictable codebases, and operational complexity that grows faster than the applications it supports.
 
-The result is a unified stack: **Aether** (distributed runtime), **JBCT** (coding methodology + tooling), and **Pragmatica Lite** (functional primitives) - all working together to make Java backend development predictable and scalable.
+The result: **Aether** -- a fused application runtime that handles everything between your business logic and production. One binary, one config file, one system to operate. And **JBCT** -- a coding methodology that turns Java code into executable business process specifications.
 
 ## Pragmatica Labs
 
 **Website:** [pragmaticalabs.io](https://pragmaticalabs.io)
 
-We help teams build robust Java systems through technology and training. Our tools enforce correctness at compile time, and our methodology transforms "best practices" into mechanical rules that both humans and AI can follow.
+## Aether
 
-## Featured Projects
+**Fused Application Runtime for Java** | [Repository](https://github.com/pragmaticalabs/pragmatica/tree/main/aether) | [Demo](https://www.awesomescreenshot.com/embed?id=50013933&shareKey=f16cf0ff602db9c4b7ff4928ecb382a7)
 
-### Aether
-**Distributed Java Runtime** | [Repository](https://github.com/siy/aether) | [Watch Demo](https://www.awesomescreenshot.com/video/49013877?key=a0b1105613f83dccc3948d6d41ebf75c)
+Write business logic as slices -- Java interfaces with methods. Deploy into a runtime that handles orchestration, scaling, resilience, streaming, security, and observability. No framework, no external infrastructure dependencies.
 
-The third option between monolith and microservices. Write business logic as "slices," deploy distributed. Aether handles orchestration, scaling, and resilience.
+**What's built in:**
+- Rabia consensus + two-layer topology (core + SWIM worker groups) -- proven at 12 nodes, zero failures
+- QUIC transport for all inter-node communication -- first Java distributed runtime on QUIC
+- HTTP/3 with dual-stack H1+H3 for application and management APIs
+- In-memory streaming -- ordered, replayable, consumer-paced. No external message broker
+- Cloud providers (AWS, GCP, Azure, Hetzner) -- raw REST APIs, no vendor SDKs
+- Deployment strategies -- canary, blue-green, A/B testing with auto-rollback
+- Schema migrations -- Flyway-style, consensus-coordinated, gated on readiness
+- JWT/JWKS auth, RBAC (ADMIN/OPERATOR/VIEWER), operational audit trail
+- Async PostgreSQL driver with built-in pipelining -- no external connection pooler
+- Declarative cluster management -- bootstrap, scale, upgrade from a single TOML file
+- Predictive autoscaling -- ML-based (ONNX) with 11-metric feature vector
+- 500+ tests including 4-hour soak test with chaos injection
 
-- **Predictive autoscaling** - ML-based scaling that anticipates load, not reacts to it
-- **Zero-downtime updates** - Two-stage deploy/route model with weighted traffic shifting
-- **Chaos-tested** - 80 E2E tests covering node failures, network partitions, rolling restarts
-- **Aether Forge** - Local simulator with visual dashboard for development
+**Performance:** 8K req/s at sub-5ms p95 with real PostgreSQL on a laptop. Scales to 15K req/s.
 
-Business Source License 1.1 -> Apache 2.0 after 4 years.
+Business Source License 1.1 → Apache 2.0 after 4 years.
 
-### JBCT
-**Java Backend Coding Technology** | [Repository](https://github.com/siy/coding-technology) | [Book](https://leanpub.com/jbct-book)
+## JBCT
 
-A methodology and tooling for writing deterministic, exception-free Java code. Designed for human-AI collaboration - when Claude or Copilot generates code, JBCT catches the mistakes.
+**Java Backend Coding Technology** | [Repository](https://github.com/pragmaticalabs/pragmatica/tree/main/jbct) | [Documentation](https://pragmatica.dev) | [Book](https://leanpub.com/jbct-book)
 
-- **Four return types** - `T`, `Option<T>`, `Result<T>`, `Promise<T>` cover all signatures
-- **Six structural patterns** - Leaf, Sequencer, Fork-Join, Condition, Iteration, Aspects
-- **CLI + Maven plugin** - Automated validation with zero false negatives
-- **Parse, don't validate** - Invalid states become unrepresentable
+A methodology and tooling for writing deterministic, AI-friendly Java code. Six structural patterns that map directly to BPMN constructs -- making code an executable business process specification.
 
-### Pragmatica
-**Unified Monorepo** | [Repository](https://github.com/pragmaticalabs/pragmatica)
+- **Four return types** -- `T`, `Option<T>`, `Result<T>`, `Promise<T>` cover every method signature
+- **Six patterns** -- Leaf, Sequencer, Fork-Join, Condition, Iteration, Aspects. Each maps to a BPMN construct.
+- **BPMN bridge** -- code structure mirrors business processes. Readable by non-technical stakeholders.
+- **CLI + Maven plugin** -- automated validation with zero false negatives
+- **3.5% complexity ratio** -- measured by `scc`, compared to typical 12-18% in Spring Boot applications
+- **Parse, don't validate** -- invalid states are unrepresentable
 
-All components in one place: core library, integrations, JBCT tooling, and Aether runtime.
+## Monorepo
+
+**[pragmaticalabs/pragmatica](https://github.com/pragmaticalabs/pragmatica)** -- 230K lines of Java, 1,732 files
 
 | Module | Purpose |
 |--------|---------|
-| `core/` | Result, Option, Promise - functional primitives |
-| `integrations/` | Jackson, Micrometer, JDBC, consensus |
-| `jbct/` | CLI, Maven plugin, slice processor |
-| `aether/` | Distributed runtime |
+| `core/` | Result, Option, Promise -- functional primitives with zero dependencies |
+| `integrations/` | Jackson, Micrometer, PostgreSQL, SMTP, cloud providers (AWS/GCP/Azure/Hetzner), XML, HLC |
+| `jbct/` | CLI, Maven plugin, slice annotation processor |
+| `aether/` | Distributed runtime, Forge simulator, Ember embeddable mode |
 
-## Work With Us
+## Articles
 
-- **Pilots** - Deploy Aether in your environment with direct support
-- **Training** - JBCT workshops for your team
-- **Consulting** - Architecture review and migration planning
+- [We Should Write Java Code Differently: Let's Get Practical](https://dev.to/siy/we-should-write-java-code-differently-lets-get-practical-1ib2) (2026)
+- [Nanoservices: Alternative to Monoliths and Microservices](https://dev.to/siy/nanoservices-or-alternative-to-monoliths-and-microservices-12bb) (2019)
+- [We Should Write Java Code Differently](https://dev.to/siy/we-should-write-java-code-differently-210b) (2021)
+- [Introduction to Pragmatic Functional Java](https://dev.to/siy/introduction-to-pragmatic-functional-java-142m) (2019)
 
 ## Get In Touch
 
 - **Website:** [pragmaticalabs.io](https://pragmaticalabs.io)
-- **Email:** sergiy.yevtushenko@pragmaticalabs.io
 - **LinkedIn:** [sergiy-yevtushenko](https://www.linkedin.com/in/sergiy-yevtushenko-6977a12/)
